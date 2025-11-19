@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajapushpa SKYRA | Luxurious 3 & 4 BHK Apartments in Neopolis, Hyderabad</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #A34838; /* A rich, earthy red from the PDF's color scheme */
+            --secondary-color: #3B3B3B;
+            --accent-color: #E8B94B; /* Gold/Yellow accent */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--secondary-color);
+        }
+        .bg-primary { background-color: var(--primary-color); }
+        .text-primary { color: var(--primary-color); }
+        .border-primary { border-color: var(--primary-color); }
+        .bg-accent { background-color: var(--accent-color); }
+
+        .sticky-form {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            max-width: 300px;
+            z-index: 50;
+        }
+
+        @media (max-width: 1024px) {
+            .sticky-form {
+                position: static;
+                max-width: 100%;
+                border-radius: 0;
+            }
+        }
+        /* Custom scrollbar style for elegant look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Sticky Form Section (Desktop Only) -->
+    <div class="sticky-form hidden lg:block p-4 bg-white shadow-xl rounded-l-xl transition-all duration-300 hover:shadow-2xl">
+        <div class="bg-primary text-white p-3 rounded-t-xl -m-4 mb-4 text-center">
+            <h3 class="font-bold text-lg">ENQUIRE NOW</h3>
+            <p class="text-xs opacity-80">Get Floor Plans & Pricing</p>
+        </div>
+        <form class="space-y-3">
+            <input type="text" placeholder="Your Name *" required class="w-full p-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
+            <input type="email" placeholder="Email ID *" required class="w-full p-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
+            <input type="tel" placeholder="Mobile Number *" required class="w-full p-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
+            <select class="w-full p-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
+                <option>Preferred Unit Size</option>
+                <option>3 BHK (3140 - 3375 Sft)</option>
+                <option>4 BHK (3830 - 5350 Sft)</option>
+            </select>
+            <button type="submit" class="w-full bg-accent text-gray-900 font-bold py-3 rounded-lg shadow-lg hover:bg-yellow-600 transition duration-300">
+                DOWNLOAD BROCHURE
+            </button>
+            <p class="text-xs text-center text-gray-500">TS RERA Reg. No.: P02400009520</p>
+        </form>
+    </div>
+
+    <!-- Mobile Sticky Form Bar (Bottom) -->
+    <div class="fixed bottom-0 left-0 w-full lg:hidden z-50 bg-primary p-3 shadow-2xl">
+        <button onclick="document.getElementById('mobile-form-modal').classList.remove('hidden')" class="w-full bg-accent text-gray-900 font-bold py-3 rounded-lg shadow-xl hover:bg-yellow-600 transition duration-300">
+            ENQUIRE NOW & DOWNLOAD BROCHURE
+        </button>
+    </div>
+
+    <!-- Mobile Form Modal -->
+    <div id="mobile-form-modal" class="fixed inset-0 bg-black bg-opacity-75 z-[60] hidden transition-opacity">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-xl shadow-2xl w-full max-w-sm">
+                <div class="bg-primary text-white p-4 rounded-t-xl flex justify-between items-center">
+                    <h3 class="font-bold text-xl">GET DETAILS INSTANTLY</h3>
+                    <button onclick="document.getElementById('mobile-form-modal').classList.add('hidden')" class="text-white hover:text-gray-200">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+                <form class="p-5 space-y-4">
+                    <input type="text" placeholder="Your Name *" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
+                    <input type="email" placeholder="Email ID *" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
+                    <input type="tel" placeholder="Mobile Number *" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
+                    <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
+                        <option>Preferred Unit Size</option>
+                        <option>3 BHK (3140 - 3375 Sft)</option>
+                        <option>4 BHK (3830 - 5350 Sft)</option>
+                    </select>
+                    <button type="submit" class="w-full bg-accent text-gray-900 font-bold py-3 rounded-lg shadow-lg hover:bg-yellow-600 transition duration-300">
+                        DOWNLOAD BROCHURE
+                    </button>
+                    <p class="text-xs text-center text-gray-500">TS RERA Reg. No.: P02400009520</p>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- LLM Explanation Modal -->
+    <div id="llm-modal" class="fixed inset-0 bg-black bg-opacity-75 z-[60] hidden transition-opacity">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-xl shadow-2xl w-full max-w-lg">
+                <div class="bg-primary text-white p-4 rounded-t-xl flex justify-between items-center">
+                    <h3 class="font-bold text-xl">✨ Feature Insight</h3>
+                    <button onclick="document.getElementById('llm-modal').classList.add('hidden')" class="text-white hover:text-gray-200">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+                <div class="p-5">
+                    <p id="llm-loading-message" class="text-center text-primary hidden">
+                        <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-primary inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Generating expert explanation...
+                    </p>
+                    <div id="llm-content" class="text-gray-700 space-y-3">
+                        <!-- Content goes here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="lg:mr-80">
+        <!-- Hero Section -->
+        <section class="relative h-screen bg-cover bg-center" 
+            style="background-image: url('uploaded:Screenshot 2025-10-29 073209.jpg-170f64f9-fb0c-4b2e-9d3e-b6d127a014d2');">
+            <div class="absolute inset-0 bg-black opacity-40"></div>
+            <div class="relative flex flex-col items-center justify-center h-full text-white text-center p-4">
+                <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+                    SKYRA
+                </h1>
+                <p class="text-2xl md:text-3xl mt-4 font-light max-w-3xl" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">
+                    The **S.E.T. Life** Awaits: **Spacious, Elegant, Tall** Residences in Neopolis, Hyderabad.
+                </p>
+                <div class="mt-8 space-y-4 md:space-y-0 md:space-x-8 flex flex-col md:flex-row items-center justify-center">
+                    <a href="#amenities" class="bg-accent text-gray-900 font-bold py-3 px-8 rounded-lg shadow-xl hover:bg-yellow-600 transition duration-300 inline-block mb-4 md:mb-0">
+                        Explore Amenities
+                    </a>
+                    <a href="tel:9374703339" class="border-2 border-white text-white font-bold py-3 px-8 rounded-lg shadow-xl hover:bg-white hover:text-primary transition duration-300 inline-flex items-center space-x-2">
+                        <!-- SVG Phone Icon -->
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828zM15 4a1 1 0 00-1-1H3a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1v-4a1 1 0 10-2 0v4H4V4h10a1 1 0 001-1z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>CALL: 9374703339</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Highlights Section -->
+        <section id="highlights" class="py-16 bg-white">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-primary">PROJECT AT A GLANCE</h2>
+                    <p class="mt-2 text-xl text-gray-600">Rajapushpa Skyra: Futuristic Living Elevated.</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="p-6 rounded-xl bg-gray-100 shadow-lg">
+                        <p class="text-5xl font-extrabold text-primary">6.5</p>
+                        <p class="text-lg mt-2 font-semibold text-secondary">ACRES</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-gray-100 shadow-lg">
+                        <p class="text-5xl font-extrabold text-primary">3</p>
+                        <p class="text-lg mt-2 font-semibold text-secondary">TOWERS</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-gray-100 shadow-lg">
+                        <p class="text-5xl font-extrabold text-primary">56</p>
+                        <p class="text-lg mt-2 font-semibold text-secondary">FLOORS</p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-gray-100 shadow-lg">
+                        <p class="text-5xl font-extrabold text-primary">777</p>
+                        <p class="text-lg mt-2 font-semibold text-secondary">UNITS</p>
+                    </div>
+                </div>
+
+                <div class="mt-16 text-center">
+                    <div class="text-4xl font-extrabold text-primary mb-4">Unit Sizes</div>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <div class="px-6 py-3 bg-primary text-white rounded-full text-lg font-semibold shadow-md">
+                            3 BHK: 3140 to 3375 Sft
+                        </div>
+                        <div class="px-6 py-3 bg-primary text-white rounded-full text-lg font-semibold shadow-md">
+                            4 BHK: 3830 to 5350 Sft
+                        </div>
+                    </div>
+                    <p class="mt-4 text-xl font-medium text-gray-700">
+                        All units feature **11 FT. High Ceilings** and a **Separate Staff Room** with a private lobby.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- S.E.T. Life Feature Blocks -->
+        <section id="set-life" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-secondary">THE S.E.T. LIFE</h2>
+                    <p class="mt-2 text-xl text-gray-600">Spacious, Elegant, Tall - defining luxury in every dimension.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- SPACIOUS -->
+                    <div class="p-6 bg-white rounded-xl shadow-xl border-t-4 border-primary hover:shadow-2xl transition duration-300">
+                        <span class="text-5xl text-accent font-bold block mb-3">S</span>
+                        <h3 class="text-2xl font-bold text-secondary mb-3">SPACIOUS</h3>
+                        <p class="text-gray-600">Space is a feeling here, thanks to the soaring **11 feet high ceilings**, private lobbies, and staff rooms outside each 3 & 4 BHK apartment. Luxury is having room to breathe.</p>
+                    </div>
+
+                    <!-- ELEGANT -->
+                    <div class="p-6 bg-white rounded-xl shadow-xl border-t-4 border-primary hover:shadow-2xl transition duration-300">
+                        <span class="text-5xl text-accent font-bold block mb-3">E</span>
+                        <h3 class="text-2xl font-bold text-secondary mb-3">ELEGANT</h3>
+                        <p class="text-gray-600">Experience **1,15,000 Sft** of engagement and fun across the **7-level clubhouse**, stilt-level, and open sky-level amenities. Elegant living greets you at every turn.</p>
+                    </div>
+
+                    <!-- TALL -->
+                    <div class="p-6 bg-white rounded-xl shadow-xl border-t-4 border-primary hover:shadow-2xl transition duration-300">
+                        <span class="text-5xl text-accent font-bold block mb-3">T</span>
+                        <h3 class="text-2xl font-bold text-secondary mb-3">TALL</h3>
+                        <p class="text-gray-600">Rising **56 floors** into the sky, SKYRA offers unbroken horizons, panoramic views, and a life elevated in every way. Set for your ascent in the heart of Neopolis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location & Connectivity -->
+        <section id="location" class="py-16 bg-white">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-primary">LOCATION: NEOPOLIS</h2>
+                    <p class="mt-2 text-xl text-gray-600">Set for Your Ascent, in the Heart of Hyderabad's Future.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <!-- Replaced Placeholder with a Tower Image (Screenshot 2025-11-19 052425.jpg is a close-up of a tower) -->
+                        <img src="uploaded:Screenshot 2025-11-19 052425.jpg-e6d0ec18-ede0-4563-9860-2647cf837b04" alt="Skyra Tower" class="rounded-xl shadow-2xl w-full">
+                        <p class="text-sm text-center text-gray-500 mt-2">Architectural Rendering of Skyra Towers.</p>
+                    </div>
+                    <div class="space-y-6">
+                        <h3 class="text-3xl font-bold text-secondary">Unmatched Connectivity</h3>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="text-3xl font-extrabold text-accent w-16">07 <span class="text-lg block font-normal text-gray-600">mins</span></div>
+                            <p class="text-xl font-semibold border-l-4 border-primary pl-4">TO FINANCIAL DISTRICT</p>
+                        </div>
+
+                        <div class="flex items-center space-x-4">
+                            <div class="text-3xl font-extrabold text-accent w-16">20 <span class="text-lg block font-normal text-gray-600">mins</span></div>
+                            <p class="text-xl font-semibold border-l-4 border-primary pl-4">TO HITEC CITY</p>
+                        </div>
+
+                        <div class="flex items-center space-x-4">
+                            <div class="text-3xl font-extrabold text-accent w-16">27 <span class="text-lg block font-normal text-gray-600">mins</span></div>
+                            <p class="text-xl font-semibold border-l-4 border-primary pl-4">TO RGIA (Airport)</p>
+                        </div>
+
+                        <p class="text-lg text-gray-700">
+                            Surrounded by top IT parks, educational institutions, and healthcare, Neopolis is officially the most sought-after address in Hyderabad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Amenities Section -->
+        <section id="amenities" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-secondary">LUXURY AMENITIES</h2>
+                    <p class="mt-2 text-xl text-gray-600">Discover New Meanings of Leisure across 3 Exclusive Levels.</p>
+                </div>
+                
+                <!-- Added Amenities Image Block -->
+                <div class="mb-12">
+                    <img src="uploaded:Screenshot 2025-11-19 052512.png-3fb2084b-e5d9-4fd2-8ab0-c048dfb71647" 
+                         alt="Clubhouse Amenities: Badminton, Pool, Gym" 
+                         class="rounded-xl shadow-xl w-full object-cover h-64 md:h-96">
+                </div>
+
+                <div class="space-y-16">
+                    <!-- Clubhouse -->
+                    <div class="bg-white p-6 md:p-10 rounded-xl shadow-2xl">
+                         <!-- Clubhouse Image Above List -->
+                        <div class="mb-8">
+                            <img src="uploaded:Screenshot 2025-11-19 052455.jpg-9104322b-a86a-4b14-a268-4c616df6e170" 
+                                 alt="Clubhouse Rendering" 
+                                 class="rounded-lg w-full shadow-md object-cover h-64">
+                        </div>
+                        <div class="flex justify-between items-start mb-6 border-b pb-4 border-primary">
+                            <h3 class="text-3xl font-bold text-primary">CLUBHOUSE (G+6 Floors)</h3>
+                            <div class="text-right">
+                                <span class="text-4xl font-extrabold text-accent block">60,000</span>
+                                <span class="text-lg font-semibold text-gray-600">SFT of Luxury</span>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-4 text-lg">
+                            <ul class="space-y-2">
+                                <li class="font-medium">Badminton Courts</li>
+                                <li class="font-medium">Squash Court</li>
+                                <li class="font-medium">Table Tennis</li>
+                                <li class="font-medium">Indoor Coffee Lounge</li>
+                                <li class="font-medium">Meditation/Yoga/Aerobics</li>
+                            </ul>
+                            <ul class="space-y-2">
+                                <li class="font-medium">Health Club/Gym</li>
+                                <li class="font-medium">Banquet Hall with Party Lawn</li>
+                                <li class="font-medium">AV Room/Preview Theatre</li>
+                                <li class="font-medium">Pool & Billiards Lounge</li>
+                                <li class="font-medium">Multipurose Hall</li>
+                            </ul>
+                            <ul class="space-y-2">
+                                <li class="font-medium">Guest Suites (Well-Furnished)</li>
+                                <li class="font-medium">SPA (Steam, Sauna, Jacuzzi)</li>
+                                <li class="font-medium">Temperature-Controlled Swimming Pool</li>
+                                <li class="font-medium">Hobby Rooms</li>
+                            </ul>
+                            <ul class="space-y-2">
+                                <li class="font-medium">Reading Lounge/Library</li>
+                                <li class="font-medium">Conference Room</li>
+                                <li class="font-medium">Grocery Store</li>
+                                <li class="font-medium">ATM</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Stilt Level -->
+                    <div class="bg-white p-6 md:p-10 rounded-xl shadow-2xl">
+                        <div class="flex justify-between items-start mb-6 border-b pb-4 border-secondary">
+                            <h3 class="text-3xl font-bold text-secondary">STILT LEVEL AMENITIES</h3>
+                            <div class="text-right">
+                                <span class="text-4xl font-extrabold text-accent block">30,000</span>
+                                <span class="text-lg font-semibold text-gray-600">SFT of Active Lifestyle</span>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-lg">
+                            <ul class="space-y-2">
+                                <li class="font-medium">Seating Lounge</li>
+                                <li class="font-medium">Calisthenics Zone</li>
+                                <li class="font-medium">Tot-Lot / Adventure Play Area</li>
+                            </ul>
+                            <ul class="space-y-2">
+                                <li class="font-medium">Senior Citizens' Lounge</li>
+                                <li class="font-medium">WiFi Pod/Study Zone</li>
+                                <li class="font-medium">Yoga & Aerobics Deck</li>
+                            </ul>
+                            <ul class="space-y-2">
+                                <li class="font-medium">Café with Juice Bar</li>
+                                <li class="font-medium">Outdoor Living Zone</li>
+                                <li class="font-medium">Double Height Entrance Lounge</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Sky Level -->
+                    <div class="bg-white p-6 md:p-10 rounded-xl shadow-2xl">
+                        <div class="flex justify-between items-start mb-6 border-b pb-4 border-primary">
+                            <h3 class="text-3xl font-bold text-primary">SKY LEVEL AMENITIES</h3>
+                            <div class="text-right">
+                                <span class="text-4xl font-extrabold text-accent block">25,000</span>
+                                <span class="text-lg font-semibold text-gray-600">SFT - Your New Base</span>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-lg">
+                            <ul class="space-y-2">
+                                <li class="font-medium">Terrace Party Lawn</li>
+                                <li class="font-medium">Sky Fitness Zone</li>
+                                <li class="font-medium">Sky Yoga Deck</li>
+                            </ul>
+                            <ul class="space-y-2">
+                                <li class="font-medium">Cabana Corner / Outdoor Seating</li>
+                                <li class="font-medium">Mini Golf</li>
+                                <li class="font-medium">Landscaped Garden</li>
+                            </ul>
+                            <ul class="space-y-2">
+                                <li class="font-medium">Star Gazing/City Lights Gazing Deck</li>
+                                <li class="font-medium">Sky Cinema/Amphitheatre</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Floor Plans Section -->
+        <section id="floorplans" class="py-16 bg-white">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-primary">FLOOR PLANS</h2>
+                    <p class="mt-2 text-xl text-gray-600">Diverse layouts designed for the grand life.</p>
+                </div>
+                
+                <div class="space-y-12">
+                    <!-- 4 BHK Luxury Example (Using Screenshot 2025-11-19 052534 - Copy.jpg) -->
+                    <div class="p-6 border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                        <h3 class="text-3xl font-bold text-secondary mb-4">4 BHK + Staff Room | 4000 Sft (West Facing - Unit 1)</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <img src="uploaded:Screenshot 2025-11-19 052534 - Copy.jpg-81e13498-58d5-401b-a1de-bf6e4546a71e" alt="4 BHK 4000 Sft Floor Plan" class="rounded-lg w-full shadow-md">
+                                <p class="text-sm text-center text-gray-500 mt-2">Detailed floor plan for the 4 BHK, 4000 Sft unit.</p>
+                            </div>
+                            <div class="space-y-3 text-lg text-gray-700">
+                                <p><span class="font-semibold text-primary">Saleable Area:</span> 4000 Sft</p>
+                                <p><span class="font-semibold text-primary">Carpet Area:</span> 2562 Sft</p>
+                                <p><span class="font-semibold text-primary">Features:</span> Grand Entrance Lobby (19'8"X9'0"), Separate Drawing (13'0"X21'0") and Living (19'8"X17'0"), Dining, Pooja, Store, Kitchen, 4 spacious Bedrooms, and a Staff Room with attached Toilet.</p>
+                                <p class="text-xl font-bold mt-4">The ultimate in spacious, contemporary design, perfectly suited for large families.</p>
+                                <a href="#enquire" class="mt-4 bg-primary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-red-700 transition duration-300 inline-block">
+                                    Request Complete Floor Plan Set
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3 BHK Luxury Example (Using Screenshot 2025-11-19 052600.jpg) -->
+                    <div class="p-6 border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                        <h3 class="text-3xl font-bold text-secondary mb-4">3 BHK + Staff Room | 3375 Sft (West Facing - Unit 1)</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <img src="uploaded:Screenshot 2025-11-19 052600.jpg-d747a58e-48bc-4103-aa16-a6daeced9134" alt="3 BHK 3375 Sft Floor Plan" class="rounded-lg w-full shadow-md">
+                                <p class="text-sm text-center text-gray-500 mt-2">Detailed floor plan for the 3 BHK, 3375 Sft unit.</p>
+                            </div>
+                            <div class="space-y-3 text-lg text-gray-700">
+                                <p><span class="font-semibold text-primary">Saleable Area:</span> 3375 Sft</p>
+                                <p><span class="font-semibold text-primary">Carpet Area:</span> 2046 Sft</p>
+                                <p><span class="font-semibold text-primary">Features:</span> Efficient yet luxurious layout with separate Drawing (14'8"X14'0"), spacious Living (13'2"X14'0"), Pooja, Kitchen, 3 large Bedrooms, and a dedicated Staff Room. Generous balcony space.</p>
+                                <p class="text-xl font-bold mt-4">Thoughtfully designed layouts maximizing light, ventilation, and privacy.</p>
+                                <a href="#enquire" class="mt-4 bg-primary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-red-700 transition duration-300 inline-block">
+                                    Request Complete Floor Plan Set
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Specifications Summary -->
+        <section id="specifications" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-secondary">PREMIUM SPECIFICATIONS</h2>
+                    <p class="mt-2 text-xl text-gray-600">Every Detail, A New Standard Set In Realty.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="p-6 bg-white rounded-xl shadow-lg border-l-4 border-accent">
+                        <h3 class="text-2xl font-bold text-primary mb-3">STRUCTURE & FINISHES</h3>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>
+                                **RCC Shear Wall Structure System** (Earthquake Resistant).
+                                <button onclick="explainFeature('RCC Shear Wall Structure System')" class="ml-2 text-sm text-primary font-semibold hover:underline bg-gray-100 px-2 py-0.5 rounded-full inline-flex items-center">
+                                    ✨ Explain Feature
+                                </button>
+                            </li>
+                            <li>Floor Height: **3.35 M** (FFL to FFL).</li>
+                            <li>**Imported Marble Flooring** in Drawing, Living, Dining, and Master Bedroom.</li>
+                            <li>Luxury Acrylic Emulsion Paint (Low VOC) on all internal walls.</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-6 bg-white rounded-xl shadow-lg border-l-4 border-accent">
+                        <h3 class="text-2xl font-bold text-primary mb-3">JOINERY & SERVICES</h3>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>8 ft. height **Engineered Wood Frames** for Main and Internal Doors.</li>
+                            <li>**Reinforced Aluminium Double Glazed Sliding Windows** with insect screen provision.</li>
+                            <li>
+                                Luxury Plumbing Fixtures (**Kohler, Grohe** or equivalent) and Wall-hung WCs.
+                                <button onclick="explainFeature('Luxury Plumbing Fixtures by Kohler or Grohe')" class="ml-2 text-sm text-primary font-semibold hover:underline bg-gray-100 px-2 py-0.5 rounded-full inline-flex items-center">
+                                    ✨ Explain Quality
+                                </button>
+                            </li>
+                            <li>Provision for **VRV Air-Conditioning System** in all major rooms.</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-6 bg-white rounded-xl shadow-lg border-l-4 border-accent">
+                        <h3 class="text-2xl font-bold text-primary mb-3">MEP & COMMON AREAS</h3>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>**100% DG Power Backup** for all units and common areas.</li>
+                            <li>**High Speed Automatic Passenger Elevators** (Hitachi/Mitsubishi or equivalent).</li>
+                            <li>Smart Access Control, Surveillance cameras, and Centralised **BMS**.</li>
+                            <li>STP, Water Softener Plant, and Automated Billing System.</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-6 bg-white rounded-xl shadow-lg border-l-4 border-accent">
+                        <h3 class="text-2xl font-bold text-primary mb-3">RERA & Builder</h3>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>**TS RERA Reg. No.:** P02400009520</li>
+                            <li>From **Rajapushpa Properties**: 18+ Years of Excellence.</li>
+                            <li>48.67+ Million Sft. Portfolio.</li>
+                            <li>18000+ Happy Residents.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Banner -->
+        <section id="enquire" class="bg-primary py-12">
+            <div class="container mx-auto px-4 max-w-6xl text-center text-white">
+                <h2 class="text-3xl md:text-4xl font-extrabold">READY TO EXPERIENCE THE SKYRA LIFE?</h2>
+                <p class="mt-3 text-xl font-light">Get the detailed e-brochure, pricing, and virtual tour link today.</p>
+                <a href="tel:9374703339" class="mt-6 bg-accent text-gray-900 font-bold text-xl py-4 px-10 rounded-lg shadow-2xl hover:bg-yellow-600 transition duration-300 inline-flex items-center space-x-2">
+                     <!-- SVG Phone Icon -->
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828zM15 4a1 1 0 00-1-1H3a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1v-4a1 1 0 10-2 0v4H4V4h10a1 1 0 001-1z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>CALL US NOW: 9374703339</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="bg-secondary text-white py-10">
+            <div class="container mx-auto px-4 max-w-6xl grid md:grid-cols-3 gap-8 text-sm">
+                <div>
+                    <h4 class="text-xl font-bold mb-3">Rajapushpa SKYRA</h4>
+                    <p>Neopolis, Kokapet, Hyderabad</p>
+                    <p class="mt-2">TS RERA Reg. No.: **P02400009520**</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-3">Contact Us</h4>
+                    <p>Corporate Office: 6th Floor, Rajapushpa Summit, Financial District, Gachibowli, Hyderabad - 500032</p>
+                    <p class="mt-2">Email: sales@rajapushpa.in</p>
+                    <p class="mt-2 flex items-center space-x-2">
+                        <!-- SVG Phone Icon in Footer -->
+                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.744 4.184a1 1 0 01-1.332 1.157l-1.397-.7a1 1 0 00-1.21.144l-1.334 1.334a1 1 0 00-.144 1.21l.7 1.397a1 1 0 01-1.157 1.332l-4.184-.744A1 1 0 012 16.847V3z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Sales Hotline: <a href="tel:9374703339" class="hover:underline font-semibold">9374703339</a></span>
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-3">Disclaimer</h4>
+                    <p>This is not a legal offering. Furniture and images are for representation only and are subject to modification or change by the project owners. Flat areas will be finalized as per construction.</p>
+                </div>
+            </div>
+            <div class="text-center mt-8 pt-4 border-t border-gray-700 text-gray-400">
+                &copy; 2024 Rajapushpa Properties. All rights reserved.
+            </div>
+        </footer>
+
+    </main>
+    
+    <script>
+        // --- Gemini API Implementation for Feature Explanation ---
+
+        const apiKey = ""; // API key is left empty as per instructions.
+        const apiUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=" + apiKey;
+
+        /**
+         * Fetches an explanation from the Gemini API with exponential backoff.
+         * @param {string} prompt The text to be explained.
+         * @param {number} attempt Current retry attempt (starts at 1).
+         * @returns {Promise<string>} The generated explanation text.
+         */
+        async function generateExplanation(prompt, attempt = 1) {
+            const systemPrompt = "Act as a helpful and knowledgeable luxury real estate expert. Explain the following complex construction and amenity term in a clear, concise, and simple way for a prospective buyer. Focus on the benefit to the resident. Keep the explanation to two short paragraphs max, using markdown for formatting.";
+            
+            const payload = {
+                contents: [{ parts: [{ text: prompt }] }],
+                systemInstruction: { parts: [{ text: systemPrompt }] },
+            };
+
+            const delay = Math.pow(2, attempt) * 1000;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    if (response.status === 429 && attempt < 5) { // Too Many Requests
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        return generateExplanation(prompt, attempt + 1);
+                    }
+                    throw new Error(`API request failed with status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                const text = result.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                if (!text) {
+                    throw new Error("No text content received from API.");
+                }
+
+                return text;
+
+            } catch (error) {
+                console.error("Gemini API Error:", error);
+                return "Sorry, I couldn't generate an explanation right now. Please check back later or contact our sales team for details.";
+            }
+        }
+
+        /**
+         * Main function to display the modal and trigger the LLM call.
+         * @param {string} featureText The specific feature name to explain.
+         */
+        async function explainFeature(featureText) {
+            const modal = document.getElementById('llm-modal');
+            const loading = document.getElementById('llm-loading-message');
+            const content = document.getElementById('llm-content');
+
+            // 1. Show modal and loading state
+            content.innerHTML = '';
+            loading.classList.remove('hidden');
+            modal.classList.remove('hidden');
+
+            const fullPrompt = `Explain the feature: "${featureText}"`;
+
+            // 2. Call the API
+            const explanation = await generateExplanation(fullPrompt);
+
+            // 3. Hide loading and display result
+            loading.classList.add('hidden');
+            
+            // Basic markdown to HTML conversion (for paragraphs/bolding)
+            const htmlContent = explanation
+                .split('\n\n')
+                .map(p => {
+                    const cleanP = p.trim().replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                    return cleanP ? `<p>${cleanP}</p>` : '';
+                })
+                .join('');
+                
+            content.innerHTML = htmlContent || `<p>${explanation}</p>`;
+        }
+    </script>
+</body>
+</html>
